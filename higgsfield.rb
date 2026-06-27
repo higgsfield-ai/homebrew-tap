@@ -5,13 +5,13 @@
 class Higgsfield < Formula
   desc "Higgsfield AI CLI — generate images and videos from the terminal."
   homepage "https://higgsfield.ai"
-  version "1.0.0"
+  version "1.0.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/higgsfield-ai/cli/releases/download/v1.0.0/hf_1.0.0_darwin_amd64.tar.gz"
-      sha256 "62c119ed9eb61ec85536661c0be4f5652cc937c47f7b7122795b9a2db3591609"
+      url "https://github.com/higgsfield-ai/cli/releases/download/v1.0.1/hf_1.0.1_darwin_amd64.tar.gz"
+      sha256 "8fb0387b3df9f57e88304f38343fe2979f88bfa5a165dd97ff3dbf7ed3ccfff2"
 
       define_method(:install) do
         bin.install "hf" => "higgsfield"
@@ -20,8 +20,8 @@ class Higgsfield < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/higgsfield-ai/cli/releases/download/v1.0.0/hf_1.0.0_darwin_arm64.tar.gz"
-      sha256 "51824ecf2f21b3a164c42b18770c450a97d9757d0c74111a6c2eb3fdccee77d5"
+      url "https://github.com/higgsfield-ai/cli/releases/download/v1.0.1/hf_1.0.1_darwin_arm64.tar.gz"
+      sha256 "ee8b849a1af13d657eca611f672f1c207aae086e154f0169b3ae63b4d26278e7"
 
       define_method(:install) do
         bin.install "hf" => "higgsfield"
@@ -33,8 +33,8 @@ class Higgsfield < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/higgsfield-ai/cli/releases/download/v1.0.0/hf_1.0.0_linux_amd64.tar.gz"
-      sha256 "a577c49e0f1192a97bd083cc47ede48ed4524e5538d015cb81345e866151c4b2"
+      url "https://github.com/higgsfield-ai/cli/releases/download/v1.0.1/hf_1.0.1_linux_amd64.tar.gz"
+      sha256 "fd5bc984cae553648f0d3db31f06a5dc696fa5620c6d5319f445a1653f8f4e46"
       define_method(:install) do
         bin.install "hf" => "higgsfield"
         bin.install_symlink "higgsfield" => "higgs"
@@ -42,8 +42,8 @@ class Higgsfield < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/higgsfield-ai/cli/releases/download/v1.0.0/hf_1.0.0_linux_arm64.tar.gz"
-      sha256 "266df1381a38981870f2deb15229a02e636465925511c7715a19cf87786bad48"
+      url "https://github.com/higgsfield-ai/cli/releases/download/v1.0.1/hf_1.0.1_linux_arm64.tar.gz"
+      sha256 "1bf1ca5ef72155bf225f44dce3cb8d9e0e38d5cd7d85d1259beeafe57c8eea75"
       define_method(:install) do
         bin.install "hf" => "higgsfield"
         bin.install_symlink "higgsfield" => "higgs"
